@@ -1,0 +1,23 @@
+class Timer
+	attr_accessor :val
+	def seconds(val=0)
+		@val=val
+	end
+	def time_string(@val)
+		mins = @val/60
+		hours = mins / 60
+		sec = @val % 60
+		mitt = mins % 60
+		h = hours.to_s
+		s= sec.to_s
+		m = mitt.to_s
+			if m.size < 2
+				m= "0" + m
+			elsif h.size < 2
+				h = "0" + h
+			elsif s.size < 2
+				s= "0" + s
+			end
+		h + ":" + m + ":" + s
+	end
+end

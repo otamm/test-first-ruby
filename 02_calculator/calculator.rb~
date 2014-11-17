@@ -1,0 +1,46 @@
+def add(num1,num2)
+	return num1 + num2
+end
+
+def subtract(num1,num2)
+	return num1 - num2
+end
+
+def sum(arr)
+total=0
+	for num in arr
+		total+=num
+	end
+return total
+end
+
+def multiply(*args)
+num=1
+args.each{|nu| num*=nu}
+return num
+end
+
+def power(num1,num2)
+a=1
+b=num1
+while a < num2
+a+=1
+b*=num1
+end
+return b
+end
+
+def factorial(x)
+return 0 if x==0
+    fact=[]
+    i=0
+        while i < x
+            i+=1
+            fact.push(i)
+        end
+    number=1
+    for num in fact
+        number*=num
+    end
+    return number
+end

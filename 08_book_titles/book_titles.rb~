@@ -1,0 +1,18 @@
+class Book
+
+def title
+	@title
+end
+def title=title
+	@title=titleize(title)
+
+def titleize(title)
+	li_wrd=["and","in","the","a","an"]	
+	tit=title.split(" ")
+	for word in tit
+		word.capitalize! unless li_wrd.include?(word)
+	end
+	t= titl.join(" ")
+	t[0].upcase + t[1,t.length]
+end
+end
